@@ -1,158 +1,255 @@
+/* Basic Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image:
-      linear-gradient(rgba(0, 102, 204, 0.3), rgba(0, 102, 204, 0.3)),
-      url("photos/Background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #333;
-    /* subtle smooth font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background-color: #f4f4f4;
 }
 
+/* Header */
 .header {
-    background: linear-gradient(90deg, #004080, #0066cc);
+    background-color: #0066cc;
     color: white;
-    padding: 25px 20px;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background 0.3s ease;
 }
 
 .logo {
     height: 80px;
-    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
-    transition: transform 0.3s ease;
-}
-.logo:hover {
-    transform: scale(1.05);
 }
 
+/* Navigation Menu */
 .menu {
-    background-color: #0059b3;
+    background-color: #333;
     overflow: hidden;
-    box-shadow: inset 0 -3px 8px rgba(255,255,255,0.15);
-    text-align: center;
-    user-select: none;
 }
 
 .menu a {
     color: white;
-    padding: 14px 24px;
+    padding: 12px 16px;
     text-decoration: none;
     display: inline-block;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    border-radius: 6px;
 }
 
-.menu a:hover,
-.menu a.active {
-    background-color: #003d66;
-    color: #ffd54f;
-    box-shadow: 0 0 12px 2px #ffd54faa;
-    transform: scale(1.1);
+.menu a:hover {
+    background-color: #444;
 }
 
+/* Content Layout */
 .content {
     display: flex;
-    padding: 30px 20px;
-    gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px;
 }
 
 .left, .right {
     width: 25%;
-    background-color: #f9fbfd;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    color: #222;
-    transition: box-shadow 0.3s ease;
-}
-.left:hover, .right:hover {
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    padding: 10px;
+    background-color: #cccccc;
 }
 
 .main {
     width: 50%;
-    padding: 25px 30px;
-    background-color: rgba(0, 102, 204, 0.9);
-    border-radius: 10px;
-    color: #fff;
-    box-shadow: 0 8px 20px rgba(0, 51, 102, 0.4);
-    transition: box-shadow 0.3s ease;
-}
-.main:hover {
-    box-shadow: 0 12px 30px rgba(0, 51, 102, 0.6);
+    padding: 10px;
+    color: white; /* Set main content font to white */
 }
 
-.main h2 {
-    margin-top: 0;
-    letter-spacing: 1.3px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+/* Services Section */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: black; /* Override font color for service section */
 }
 
-.main p {
-    font-size: 1.15rem;
-    line-height: 1.75;
-}
-
-.button {
-    background-color: #ffd54f;
-    color: #004080;
-    padding: 14px 22px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 700;
-    margin-top: 20px;
-    box-shadow: 0 6px 12px rgba(255, 213, 79, 0.7);
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-    display: inline-block;
+.service {
+    width: 30%;
+    margin: 10px 0;
+    background-color: #ddd;
+    padding: 10px;
     text-align: center;
-    user-select: none;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+}
+
+/* Buttons */
+.button {
+    background-color: #0066cc;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .button:hover {
-    background-color: #ffc107;
-    color: #002952;
-    box-shadow: 0 10px 24px rgba(255, 193, 7, 0.9);
-    transform: translateY(-2px);
+    background-color: #005bb5;
 }
 
+/* Form Inputs */
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Footer */
 .footer {
-    background-color: #003d66;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 18px 12px;
-    font-size: 15px;
-    margin-top: 50px;
-    box-shadow: inset 0 2px 8px rgba(255,255,255,0.15);
-    letter-spacing: 0.5px;
+    padding: 10px;
+    font-size: 13px;
+    margin-top: 20px;
 }
 
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 600px) {
     .content {
         flex-direction: column;
-        padding: 20px 15px;
     }
 
     .left, .main, .right {
         width: 100%;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
+    }
+
+    .service {
+        width: 100%;
     }
 
     .menu a {
-        padding: 12px 15px;
-        font-size: 15px;
+        display: block;
+        text-align: center;
+    }
+}/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.header {
+    background-color: #0066cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    height: 80px;
+}
+
+/* Navigation Menu */
+.menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu a:hover {
+    background-color: #444;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    padding: 20px;
+}
+
+.left, .right {
+    width: 25%;
+    padding: 10px;
+    background-color: #cccccc;
+}
+
+.main {
+    width: 50%;
+    padding: 10px;
+    color: white; /* Set main content font to white */
+}
+
+/* Services Section */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: black; /* Override font color for service section */
+}
+
+.service {
+    width: 30%;
+    margin: 10px 0;
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+}
+
+/* Buttons */
+.button {
+    background-color: #0066cc;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
+
+/* Form Inputs */
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .left, .main, .right {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    .menu a {
+        display: block;
+        text-align: center;
     }
 }
